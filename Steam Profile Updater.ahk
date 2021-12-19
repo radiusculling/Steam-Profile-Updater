@@ -14,13 +14,12 @@ Loop
 			If A_LoopField is Number
 			NewVar .= A_LoopField
 		}
-	NewVar := NewVar - 22000000000 
-	Num := NewVar
+	Num := NewVar - 22000000000 
 	VarSetCapacity( fNum,32 )
 	DllCall( "GetNumberFormat",UInt,0x0409,UInt,0,Str,Num,UInt,0,Str,fNum,Int,32 )
 	StringTrimRight, fNum, fNum, 3
 	FormatTime, TimeString
-	NewProfileBio = %FNum% seconds on Steam and counting...`nTime last fetched at %TimeString% (PST)
+	NewProfileBio = %FNum% seconds on Steam and counting...`nTime last fetched at %TimeString% (PST)`n[i]Autosteam profile updater by me :-)[/i]
 
 	;Steam Interaction 
 	Click, 1014, 476
